@@ -43,8 +43,10 @@ public class JobData {
                 values.add(aValue);
             }
         }
-        Collections.sort(values);
-        return values;
+        ArrayList<String> safeList = new ArrayList<>();
+        safeList.addAll(values);
+        Collections.sort(safeList);
+        return safeList;
     }
 
     public static ArrayList<HashMap<String, String>> findAll() {
